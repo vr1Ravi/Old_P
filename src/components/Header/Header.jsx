@@ -1,19 +1,30 @@
 import { IoIosContact } from "react-icons/io";
 import "./header.scss";
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ currentWidth }) => {
+  console.log(currentWidth);
   return (
     <>
       <header>
-        <div className="leftHeader">
-          {/* Header Left circles */}
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        {currentWidth > 1000 && (
+          <div className="leftHeader">
+            {/* Header Left circles */}
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
         <div className="rightHeader">
           <button>
             Contact Me <IoIosContact />
           </button>
+          {currentWidth < 1000 && (
+            <div className="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          )}
         </div>
       </header>
     </>
