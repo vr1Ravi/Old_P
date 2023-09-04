@@ -1,6 +1,6 @@
 aside {
   background-color: #1c1b23;
-  width: 200px;
+  width: 250px;
   height: 80vh;
   margin: 2rem;
   position: fixed;
@@ -8,22 +8,23 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   .links {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin-top: 3rem;
+    margin-bottom: 2rem;
     justify-content: center;
-    .link {
+    a {
       display: flex;
       margin-top: 2rem;
       align-items: center;
       color: #8b8a91;
       transition: all 0.5s ease;
       width: 111%;
+      margin-left: 14px;
+      text-decoration: none;
       > svg {
-        font-size: 20px;
+        font-size: 21px;
       }
       > p {
         margin-bottom: -0.5rem;
