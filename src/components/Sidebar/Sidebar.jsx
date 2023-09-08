@@ -7,9 +7,48 @@ import { FiLinkedin } from "react-icons/fi";
 import { AiOutlineSlack } from "react-icons/ai";
 import { AiOutlineAmazon } from "react-icons/ai";
 import { GiCampCookingPot } from "react-icons/gi";
-const Sidebar = () => {
+import { RiBuilding3Fill } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
+import { FaHackerrank } from "react-icons/fa";
+
+import { useDispatch } from "react-redux";
+
+import { useSelector } from "react-redux";
+import { setDisplayStyle } from "../../appStateSlice";
+import { useEffect } from "react";
+// eslint-disable-next-line react/prop-types
+const Sidebar = ({ currentWidth }) => {
+  console.log(currentWidth);
+  const dispatch = useDispatch();
+  const displayStyle = useSelector((state) => state.appState.displayStyle);
+  useEffect(() => {
+    console.log("in use effect");
+    if (currentWidth <= 1000) {
+      console.log("in use effect if");
+      dispatch(
+        setDisplayStyle({
+          display: "none",
+          width: "17rem",
+          marginLeft: "0",
+          marginTop: "6rem",
+        })
+      );
+    } else {
+      dispatch(
+        setDisplayStyle({
+          display: "flex",
+          marginLeft: "2rem",
+          marginTop: "6rem",
+          with: "17rem",
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, currentWidth]);
+
+  console.log(displayStyle);
   return (
-    <aside>
+    <aside style={displayStyle}>
       <SidebarChild
         title={""}
         items={[
@@ -57,6 +96,34 @@ const Sidebar = () => {
             link: (
               <>
                 <a
+                  href="https://leetcode.com/Ravi_ok/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SiLeetcode style={{ color: "#ffa116" }} />
+                  <p>Leetcode</p>
+                </a>
+              </>
+            ),
+          },
+          {
+            link: (
+              <>
+                <a
+                  href="https://www.hackerrank.com/ravikumarjha059?hr_r=1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaHackerrank style={{ color: "#32c766" }} />
+                  <p>HakerRank</p>
+                </a>
+              </>
+            ),
+          },
+          {
+            link: (
+              <>
+                <a
                   href="https://www.linkedin.com/in/ravishankar-jha-408679216/"
                   target="_blank"
                   rel="noreferrer"
@@ -76,7 +143,7 @@ const Sidebar = () => {
             link: (
               <>
                 <a
-                  href="https://slack-clone-d875a.web.app/"
+                  href="https://github.com/vr1Ravi/Slack-Clone"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -85,20 +152,19 @@ const Sidebar = () => {
                 </a>
               </>
             ),
-            // icon: <AiOutlineSlack style={{ color: "#8b8a91" }} />,
             name: "Slack Clone",
           },
           {
             link: (
               <>
                 <a
-                  href="https://clone-26395.web.app/"
+                  href="https://github.com/vr1Ravi/Amazon-Clone"
                   target="_blank"
                   rel="noreferrer"
                 >
                   {" "}
                   <AiOutlineAmazon style={{ color: "#8b8a91" }} />
-                  <p>Amazone Cloe</p>
+                  <p>Amazone Clone</p>
                 </a>
               </>
             ),
@@ -107,12 +173,26 @@ const Sidebar = () => {
             link: (
               <>
                 <a
-                  href="https://v1recipe.netlify.app/"
+                  href="https://github.com/vr1Ravi/Recipe-App"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <GiCampCookingPot style={{ color: "#8b8a91" }} />
                   <p>Recipe App</p>
+                </a>
+              </>
+            ),
+          },
+          {
+            link: (
+              <>
+                <a
+                  href="https://github.com/vr1Ravi/real-web"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <RiBuilding3Fill style={{ color: "#8b8a91" }} />
+                  <p>Propert Listing</p>
                 </a>
               </>
             ),

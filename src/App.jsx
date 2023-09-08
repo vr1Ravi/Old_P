@@ -1,28 +1,36 @@
 import "./App.css";
 import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./Store";
+import { useState } from "react";
+
 function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log(windowWidth);
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
   window.addEventListener("resize", () => {
-    setWindowWidth(window.innerWidth);
+    setCurrentWidth(window.innerWidth);
   });
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header currentWidth={windowWidth} />
-              {windowWidth > 1000 && <Sidebar />}
-            </>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header currentWidth={currentWidth} />
+                <div className="flex">
+                  {<Sidebar currentWidth={currentWidth} />}
+                  <Hero />
+                </div>
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

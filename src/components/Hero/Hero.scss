@@ -1,0 +1,54 @@
+main {
+  background-color: #14131a;
+  height: 100vh;
+  margin-left: 19.5rem;
+  margin-top: 6rem;
+  width: 80vw;
+
+  .introBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBvcnRmb2xpbyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+  }
+  .leftPart {
+    flex: 0.05;
+    img {
+      height: 100px;
+      border-radius: 81%;
+      border: 2px solid #f9f9f9;
+      width: 109px;
+      height: 106px;
+    }
+  }
+  .rightPart {
+    flex: 0.9;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 1.875rem;
+      font-family: "Montserrat";
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 1rem;
+      font-family: "Ubuntu";
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 100vw;
+    margin-left: 0;
+    .introBar {
+      margin-left: 0;
+    }
+  }
+}

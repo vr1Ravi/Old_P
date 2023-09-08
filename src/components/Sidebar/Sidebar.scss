@@ -1,13 +1,14 @@
 aside {
   background-color: #1c1b23;
-  width: 250px;
-  height: 80vh;
-  margin: 2rem;
+  flex: 0.3;
+  height: 84vh;
   position: fixed;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 6px;
+  z-index: 1;
   .links {
     display: flex;
     flex-direction: column;
@@ -25,6 +26,7 @@ aside {
       text-decoration: none;
       > svg {
         font-size: 21px;
+        margin-top: 3px;
       }
       > p {
         margin-bottom: -0.5rem;
@@ -37,5 +39,11 @@ aside {
         cursor: pointer;
       }
     }
+  }
+}
+
+@media (max-width: 1700px) {
+  aside {
+    width: 20%;
   }
 }

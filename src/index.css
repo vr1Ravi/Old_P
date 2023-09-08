@@ -5,4 +5,10 @@
 }
 body {
   background-color: #14131a;
+  display: flex;
+  overflow-x: hidden;
+}
+.flex {
+  display: flex;
+  width: 100vw;
 }
