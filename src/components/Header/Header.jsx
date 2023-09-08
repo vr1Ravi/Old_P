@@ -1,5 +1,5 @@
 import { IoIosContact } from "react-icons/io";
-import "./header.scss";
+import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setDisplayStyle } from "../../appStateSlice";
 // eslint-disable-next-line react/prop-types
