@@ -125,7 +125,7 @@ const Sidebar = ({ currentWidth }) => {
                   rel="noreferrer"
                 >
                   <FaHackerrank style={{ color: "#32c766" }} />
-                  <p>HakerRank</p>
+                  <p>HackerRank</p>
                 </a>
               </>
             ),

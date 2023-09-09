@@ -53,3 +53,12 @@ main {
     }
   }
 }
+@media (max-width: 700px) {
+  main {
+    .rightPart {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}

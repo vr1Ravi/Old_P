@@ -14,6 +14,7 @@ const HeroSecion = ({ title, items = [] }) => {
               className="card"
               target="_blank"
               rel="noreferrer"
+              style={item.itemLink === "" ? { "pointer-events": "none" } : {}}
             >
               <div className="projectImage">
                 <img src={item.itemImage} alt="" />

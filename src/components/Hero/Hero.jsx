@@ -25,8 +25,9 @@ const Hero = () => {
         <div className="rightPart">
           <h1>Ravishankar Jha</h1>
           <p>
-            Hello, I&apos;m a passionate MCA student with a strong interest in
-            frontend development.
+            Passionate frontend developer, learning new technologies and
+            creating functional web applications, looking for new challenges,
+            and I am eager to learn and grow as a frontend developer.
           </p>
         </div>
       </div>
@@ -45,7 +46,7 @@ const Hero = () => {
             itemImage: AmazonImg,
             itemName: "Amazon Clone",
             itemLink: "https://clone-26395.web.app/",
-            itemProgress: { width: "100%" },
+            itemProgress: { width: "75%" },
           },
           {
             id: 3,
@@ -70,28 +71,28 @@ const Hero = () => {
             id: 1,
             itemImage: ReactImg,
             itemName: "React.Js",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "75%" },
           },
           {
             id: 2,
             itemImage: JavascriptImg,
             itemName: "Javascript",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "80%" },
           },
           {
             id: 3,
             itemImage: HtmlAndCssImg,
             itemName: "Html, Css",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "80%" },
           },
           {
             id: 4,
             itemImage: TailwindcssImg,
             itemName: "Tailwind",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "20%" },
           },
         ]}
@@ -103,14 +104,14 @@ const Hero = () => {
             id: 1,
             itemImage: NodejsImg,
             itemName: "Node.Js",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "25%" },
           },
           {
             id: 2,
             itemImage: ExpressjsImg,
             itemName: "Express.Js",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "10%" },
           },
         ]}
@@ -122,14 +123,14 @@ const Hero = () => {
             id: 1,
             itemImage: MongodbImg,
             itemName: "MongoDB",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "50%" },
           },
           {
             id: 2,
             itemImage: MySqlImg,
             itemName: "MySql",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "10%" },
           },
         ]}
@@ -141,14 +142,14 @@ const Hero = () => {
             id: 1,
             itemImage: JavaImg,
             itemName: "Java",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "90%" },
           },
           {
             id: 2,
             itemImage: GitGithubImg,
             itemName: "GitGithub",
-            itemLink: "/",
+            itemLink: "",
             itemProgress: { width: "30%" },
           },
         ]}
