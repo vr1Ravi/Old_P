@@ -14,20 +14,18 @@ import MongodbImg from "../assets/Mongodb.png";
 import MySqlImg from "../assets/MySql.png";
 import JavaImg from "../assets/Java.png";
 import GitGithubImg from "../assets/GitGithub.png";
+import ProfilePic from "../assets/p1.jpg";
 const Hero = () => {
   return (
     <main>
       <div className="introBar">
         <div className="leftPart">
-          <img
-            src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
-            alt="Proflie_pic"
-          />
+          <img src={ProfilePic} alt="Proflie_pic" />
         </div>
         <div className="rightPart">
           <h1>Ravishankar Jha</h1>
           <p>
-            Hello, I'm a passionate MCA student with a strong interest in
+            Hello, I&apos;m a passionate MCA student with a strong interest in
             frontend development.
           </p>
         </div>

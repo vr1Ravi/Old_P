@@ -5,7 +5,6 @@ export const appStateSlice = createSlice({
   initialState: {
     displayStyle: {
       display: "flex",
-      width: "20%",
       marginLeft: "2rem",
       marginTop: "6rem",
     },

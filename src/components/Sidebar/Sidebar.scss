@@ -2,6 +2,7 @@ aside {
   background-color: #1c1b23;
   flex: 0.3;
   height: 84vh;
+  width: 17rem;
   position: fixed;
   overflow-y: auto;
   display: flex;
@@ -9,6 +10,26 @@ aside {
   align-items: center;
   border-radius: 6px;
   z-index: 1;
+  .sideBarCross {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 2%;
+    height: 20px;
+    top: 2%;
+    .sideBarCross__line {
+      width: 100%;
+      height: 2px;
+      background-color: #56555c;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(45deg);
+      &:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
   .links {
     display: flex;
     flex-direction: column;
@@ -42,8 +63,18 @@ aside {
   }
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 700px) {
   aside {
-    width: 20%;
+    width: 100%;
+    .sideBarCross {
+      display: block;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  aside {
+    .sideBarCross {
+      display: block;
+    }
   }
 }

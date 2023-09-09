@@ -28,7 +28,6 @@ const Sidebar = ({ currentWidth }) => {
       dispatch(
         setDisplayStyle({
           display: "none",
-          width: "17rem",
           marginLeft: "0",
           marginTop: "6rem",
         })
@@ -39,16 +38,27 @@ const Sidebar = ({ currentWidth }) => {
           display: "flex",
           marginLeft: "2rem",
           marginTop: "6rem",
-          with: "17rem",
         })
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, currentWidth]);
 
-  console.log(displayStyle);
+  const handleClick = () => {
+    dispatch(
+      setDisplayStyle({
+        display: "none",
+        marginLeft: "0",
+        marginTop: "6rem",
+      })
+    );
+  };
   return (
     <aside style={displayStyle}>
+      <div className="sideBarCross" onClick={handleClick}>
+        <div className="sideBarCross__line"></div>
+        <div className="sideBarCross__line"></div>
+      </div>
       <SidebarChild
         title={""}
         items={[

@@ -26,6 +26,7 @@ nav {
     width: 20rem;
     justify-content: center;
     > button {
+      opacity: 0.5;
       width: inherit;
       display: flex;
       justify-content: space-evenly;
@@ -33,7 +34,7 @@ nav {
       background-color: #2bd576;
       border: none;
       outline: none;
-      cursor: pointer;
+
       padding: 0.3rem 1rem;
       border-radius: 5px;
       color: #fff;
@@ -57,6 +58,9 @@ nav {
     width: 20px;
     height: 2px;
     background-color: rgb(79 79 82);
+  }
+  .bg {
+    background-color: #a1a1a1;
   }
 }
 

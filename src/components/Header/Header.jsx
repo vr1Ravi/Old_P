@@ -2,29 +2,33 @@ import { IoIosContact } from "react-icons/io";
 import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setDisplayStyle } from "../../appStateSlice";
+import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 const Header = ({ currentWidth }) => {
+  const [background, setBackground] = useState("");
   const dispatch = useDispatch();
   const displayStyle = useSelector((state) => state.appState.displayStyle);
-  const handleClick = () => {
+  if (displayStyle.display === "none" && background === "bg") setBackground("");
+  const handleClick = (e) => {
+    setBackground(background === "bg" ? "" : "bg");
+    console.log(e.target);
     dispatch(
       setDisplayStyle(
         displayStyle.display === "flex"
           ? {
               display: "none",
-              width: "17rem",
               marginLeft: "0",
               marginTop: "6rem",
             }
           : {
               display: "flex",
-              width: "17rem",
               marginLeft: "0",
               marginTop: "6rem",
             }
       )
     );
   };
+
   return (
     <>
       <nav>
@@ -42,9 +46,9 @@ const Header = ({ currentWidth }) => {
           </button>
           {currentWidth < 1000 && (
             <div className="hamburger" onClick={handleClick}>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div className={background}></div>
+              <div className={background}></div>
+              <div className={background}></div>
             </div>
           )}
         </div>
