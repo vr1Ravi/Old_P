@@ -25,9 +25,9 @@ const Hero = () => {
         <div className="rightPart">
           <h1>Ravishankar Jha</h1>
           <p>
-            Passionate frontend developer, learning new technologies and
-            creating functional web applications, looking for new challenges,
-            and I am eager to learn and grow as a frontend developer.
+            Passionate Web developer, learning new technologies and creating
+            functional web applications, looking for new challenges, and I am
+            eager to learn and grow as a Web developer.
           </p>
         </div>
       </div>
