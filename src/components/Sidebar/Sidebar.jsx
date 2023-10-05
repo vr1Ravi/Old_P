@@ -18,13 +18,10 @@ import { setDisplayStyle } from "../../appStateSlice";
 import { useEffect } from "react";
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ currentWidth }) => {
-  console.log(currentWidth);
   const dispatch = useDispatch();
   const displayStyle = useSelector((state) => state.appState.displayStyle);
   useEffect(() => {
-    console.log("in use effect");
     if (currentWidth <= 1000) {
-      console.log("in use effect if");
       dispatch(
         setDisplayStyle({
           display: "none",

@@ -26,7 +26,6 @@ nav {
     width: 20rem;
     justify-content: center;
     > button {
-      opacity: 0.5;
       width: inherit;
       display: flex;
       justify-content: space-evenly;
@@ -61,6 +60,47 @@ nav {
   }
   .bg {
     background-color: #a1a1a1;
+  }
+}
+.modal {
+  background-color: #14131a;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+  > .contacts {
+    display: flex;
+    color: white;
+    font-family: monospace;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    > .contact_medium {
+      display: flex;
+      width: 62%;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      > svg {
+        color: #2bd576;
+      }
+    }
+  }
+  > button {
+    color: white;
+    background: transparent;
+    color: white;
+    border: none;
+    > svg {
+      position: absolute;
+      top: 7px;
+      right: 5px;
+    }
   }
 }
 

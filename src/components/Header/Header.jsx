@@ -1,11 +1,16 @@
 import { IoIosContact } from "react-icons/io";
+import { ImCross } from "react-icons/im";
 import "./Header.scss";
+import Modal from "../../Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { setDisplayStyle } from "../../appStateSlice";
 import { useState } from "react";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { HiMail } from "react-icons/hi";
 // eslint-disable-next-line react/prop-types
 const Header = ({ currentWidth }) => {
   const [background, setBackground] = useState("");
+  const [showContact, setshowContact] = useState(false);
   const dispatch = useDispatch();
   const displayStyle = useSelector((state) => state.appState.displayStyle);
   if (displayStyle.display === "none" && background === "bg") setBackground("");
@@ -28,7 +33,10 @@ const Header = ({ currentWidth }) => {
       )
     );
   };
-
+  const handleContactClick = () => {
+    setshowContact(true);
+    console.log("clicked");
+  };
   return (
     <>
       <nav>
@@ -41,7 +49,7 @@ const Header = ({ currentWidth }) => {
           </div>
         )}
         <div className="rightHeader">
-          <button>
+          <button onClick={handleContactClick}>
             Contact Me <IoIosContact />
           </button>
           {currentWidth < 1000 && (
@@ -52,6 +60,25 @@ const Header = ({ currentWidth }) => {
             </div>
           )}
         </div>
+        {showContact ? (
+          <Modal>
+            <div className="modal">
+              <div className="contacts">
+                <div className="contact_medium">
+                  <BsFillTelephoneFill />
+                  <p>+918709547746</p>
+                </div>
+                <div className="contact_medium">
+                  <HiMail /> <p>ravikumarjha059@gmail.com</p>
+                </div>
+              </div>
+
+              <button onClick={() => setshowContact(false)}>
+                <ImCross />
+              </button>
+            </div>
+          </Modal>
+        ) : null}
       </nav>
     </>
   );
